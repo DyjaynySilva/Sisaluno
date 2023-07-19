@@ -1,0 +1,169 @@
+.body{
+    height: 100vh;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.topo{
+    background-color: rgb(95, 95, 211);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+
+    position: sticky;
+    top:0;
+    
+}
+
+
+.conteudo{
+    width: 100%;
+    height: 800px;
+    display: flex;
+    background-color: rgba(122, 139, 231, 0.747);
+    flex-direction: column;
+    padding-left: 7px;
+    
+    
+}
+form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 600px;
+    width: 700px;
+    padding: 100px;
+    justify-content:center;
+    padding-top: 10px;
+    
+    
+}
+
+.rodape{
+    width: 100%;
+    height: 100px; 
+    background-color:rgb(95, 95, 211) ;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    color: wheat;
+}
+
+
+a:link{
+    color: white;
+    text-decoration: none;
+
+}
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+h1{
+    padding-left: 110px;
+    padding-top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#cpf{
+    width: 200px;
+    height: 20px;
+    
+    
+}
+#nome{
+    width: 450px;
+    height: 20px;
+}
+#email{
+    width: 450px;
+    height: 20px;
+}
+#senha{
+    width: 200px;
+    height: 20px;
+}
+#cidade{
+    width: 300px;
+    height: 20px;
+}
+#estados{
+    width: 150px;
+    height: 25px;
+}
+#cep{
+    height: 20px;
+}
+#ocupacao{
+   width: 250px;
+   height: 25px;
+}
+#instituicao{
+    width: 400px;
+    height: 20px;
+}
+
+#button{
+    background-color: rgb(27, 136, 32);
+    width: 350px;
+    height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border:transparent;
+    padding: 10px;
+    margin: 20px;
+
+    
+   
+}
+.button{
+    background-color: rgb(27, 136, 32);
+    width: 550px;
+    height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border:transparent;
+    color: rgb(27, 136, 32) ;
+    padding: 40px;
+    margin: 20px;
+    
+    text-align: center;
+    
+   
+}
+
+.butao{ 
+    height: 40px;
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 25px;
+    padding-top: 50px;
+    background-color: rgba(155, 167, 238, 0.747);
+    width: 350px;
+    height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border:transparent;
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 300px;
+    height: 100px;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
