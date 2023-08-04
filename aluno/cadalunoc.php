@@ -47,58 +47,41 @@
         </nav>
         </div>
 
-    <div class="conteudo">
+    <div class="conteudo" style="background-color: rgba(155, 167, 238, 0.747);">
     
          <h1>Formulário: </h1>
-     <form action="cadaluno.php" method="get">
+     <form action="cadaluno.php" method="get" style= " display: flex; flex-direction: row; flex-wrap: wrap; height: 500px; width: 400px; padding: 100px; justify-content: flex-start; padding-top: 10px; align-items: flex-start;">
     <div>
         <p>Nome:</p>
       <input type="text" name="nome" id="nome">
     </div>
+
     <div>
-        <p>CPF:</p>
-    <input type="text" name="cpf" id="cpf">
+    <p>Idade:</p>
+    <input type="text" name="idade" id="idade">
     </div>
+
     <div>
-    <p>Email:</p>
-    <input type="email" name="email" id="email">
+        <p>Data de Nascimento</p>
+    <input type="date" name="datanascimento" id="datanascimento">
     </div>
+
+
     <div>
-    <p>Senha:</p>
-    <input type="text" name="senha" id="senha">
+    <p>Endereço:</p>
+    <input type="text" name="endereco" id="endereco">
     </div>
+
     <div>
-    <p>Cidade:</p>
-    <input type="text" name="cidade" id="cidade">
-    </div>
-    <div>
-    <p>Estados:</p>
-    <select name="estado" id="estado">
+      <p>Status:</p>
+    <select name="estatus" id="estatus">
       <option value="Escolher"> </option>
-      <option value="Minas Gerais">MG</option>
-      <option value="Bahia">BA</option>
-      <option value="São Paulo">SP</option>
-      <option value="Rio de Janeiro">RJ</option>
-    </select>
+      <option value="inativo">Inativo</option>
+      <option value="ativo">Ativo</option>
     </div>
-    <div>
-     <p>Cep:</p>
-     <input type="text" name="cep" id="cep">
-    </div>
-    <div>
-    <p>Ocupação:</p>
-    <select name="ocupacao" id="ocupacao">
-    <option value="Escolher"> Selecione!</option>
-     <option value="Estudante">Estudante</option>
-     <option value="Desempregado">Desempregado</option>
-     <option value="Docente">Professor</option>
-     <option value="Vagabundo">Vagabundo</option>
-    </select>
-    </div>
-    <div>
-    <p>Instituição:</p>
-    <input type="text" name="instituicao" id="instituicao">
-    </div>
+
+
+   
     <div>
     <input type="submit" value="CADASTRAR" id="button">
     </div>
