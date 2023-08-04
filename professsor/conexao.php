@@ -1,7 +1,12 @@
 <?php
-define('HOST', '10.70.230.53:3306');
-define('USUARIO', 'sisaluno');
-define('SENHA', 'sisaluno2023');
+// define('HOST', '10.70.230.53:3306');
+//define('USUARIO', 'sisaluno');
+//define('SENHA', 'sisaluno2023');
+//define('DBNAME','sisaluno');
+
+define('HOST', 'localhost');
+define('USUARIO', 'root');
+define('SENHA', '2324');
 define('DBNAME','sisaluno');
 
 try{
