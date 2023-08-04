@@ -8,6 +8,89 @@
     <link rel="stylesheet" href="styles.css">
     <title>Formulário</title>
 </head>
+
+<style>
+  body{
+    width: 100%;
+    height: 100vhh;
+    display: flex;
+    background-color: rgba(122, 139, 231, 0.747);
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 7px;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.conteudo{
+    width: 500px;
+    height: 600px;
+    display: flex;
+    background-color: transparent;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+   padding: 15px;
+    
+    
+    
+}
+
+.botoes{
+  height: 300px;
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    align-items: center;
+    
+}
+.butao{ 
+    height: 50px;
+    width: 400px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border:transparent;
+  
+   
+   
+
+
+  }
+
+  .butao2{ 
+    height: 50px;
+    width: 400px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border:transparent;
+   
+   
+   
+
+
+  }
+  .button{
+    background-color: rgb(27, 136, 32);
+    width: 400px;
+    height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border:transparent;
+    color: rgb(27, 136, 32) ;
+
+   
+    
+    text-align: center;
+    
+   
+}
+
+</style>
 <body>
     <div class="topo">
 
@@ -48,12 +131,21 @@
         </div>
 
         <div class="conteudo">
+
+        <div class="botoes">
             
-<Div class="butao">
-    <button class="button"><a href="cadaluno.html">CADASTRAR</a></button>
+        <Div class="butao">
+    <button class="button"><a href="cadalunoc.php">CADASTRAR</a></button>
+    </Div>
+
+     <Div class="butao2">
+   
     <button class="button"><a href="listaalunos.php">LISTA ALUNOS</a></button>
-</Div>
-       </div>
+     </Div>
+
+     </div>
+
+    </div>
 
        <div class="rodape">
            <p>@Dyjayny 2023</p>
