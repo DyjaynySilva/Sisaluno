@@ -54,19 +54,17 @@
 
 <?php
         $nome= $_GET['nome'];
-        $cpf= $_GET['cpf'];
-        $email= $_GET['email'];
-        $senha= $_GET['senha'];
-        $cidade= $_GET['cidade'];
-        $estado= $_GET['estado'];
-        $cep= $_GET['cep'];
-        $ocupacao= $_GET['ocupacao'];
-        $instituicao= $_GET['instituicao'];
+        $estatus= $_GET['estatus'];
+        $idade= $_GET['idade'];
+        $endereco= $_GET['endereco'];
+        $datanascimento= $_GET['datanascimento'];
+        
+       
 
         require_once('conexao.php');
 
-        $sql= " INSERT INTO Aluno(nome, cpf, email, senha, cidade, estado, cep, ocupacao, instituicao)
-                VALUES ('$nome','$cpf','$email','$senha','$cidade','$estado',' $cep','$ocupacao','$instituicao')";
+        $sql= " INSERT INTO aluno(nome, estatus, idade, endereco, datanascimento)
+                VALUES ('$nome','$estatus','$idade','$endereco','$datanascimento')";
 
         $stmt= $conexao->prepare($sql);
 
@@ -78,7 +76,7 @@
 
          
         
-        echo '<button class="button"><a href="index.php">voltar</a></button>';
+        echo '<button class="button"><a href="indexa.php">voltar</a></button>';
     ?>
 
 
