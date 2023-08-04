@@ -74,14 +74,12 @@
    ##armazena retorno em variaveis
    
         $nome= $array_retorno["nome"];
-        $cpf= $array_retorno["cpf"];
-        $email= $array_retorno["email"];
-        $senha= $array_retorno["senha"];
-        $cidade= $array_retorno["cidade"];
-        $estado= $array_retorno["estado"];
-        $cep= $array_retorno["cep"];
-        $ocupacao= $array_retorno["ocupacao"];
-        $instituicao= $array_retorno["instituicao"];
+        $endereco= $array_retorno["endereco"];
+        $idade= $array_retorno["idade"];
+        $estatus= $array_retorno["estatus"];
+        $datanascimento= $array_retorno["datanascimento"];
+       
+        
     
 
 
@@ -90,22 +88,15 @@
   <form method="POST" action="crudaluno.php">
          Nome:
         <input type="text" name="nome" id="" value=<?php echo $nome?> >
-        CPF:
-        <input type="text" name="cpf" id="" value=<?php echo $cpf?> >
-        Email:
-        <input type="text" name="email" id="" value=<?php echo $email?> >
-        Senha:
-        <input type="text" name="senha" id="" value=<?php echo $senha?> >
-        Cidade:
-        <input type="text" name="cidade" id="" value=<?php echo $cidade?> >
-        Estado:
-        <input type="text" name="estado" id="" value=<?php echo $estado?> >
-        Cep:
-        <input type="text" name="cep" id="" value=<?php echo $cep?> >
-        Ocupação:
-        <input type="text" name="ocupacao" id="" value=<?php echo $ocupacao?> >
-        Instituição:
-        <input type="text" name="instituicao" id="" value=<?php echo $instituicao?> >
+        Endereço:
+        <input type="text" name="endereco" id="" value=<?php echo $endereco?> >
+        Idade:
+        <input type="text" name="idade" id="" value=<?php echo $idade?> >
+        Status:
+        <input type="text" name="estatus" id="" value=<?php echo $estatus?> >
+        Data de Nascimento:
+        <input type="date" name="datanascimento" id="" value=<?php echo $datanascimento?> >
+       
 
         <input type="hidden" name="id" id="" value=<?php echo $id ?> >
         
