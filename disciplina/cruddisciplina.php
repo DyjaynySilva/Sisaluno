@@ -105,8 +105,8 @@ if(isset($_POST['update'])){
 
     if($stmt->execute())
         {
-            echo " <strong>OK!</strong> o professor
-             $nomedisciplina foi Alterado com sucesso!!!"; 
+            echo " <strong>OK!</strong> A
+             $nomedisciplina foi alterada com sucesso!!!"; 
 
             echo " <button class='button'><a href='indexd.php'>voltar</a></button>";
         }
