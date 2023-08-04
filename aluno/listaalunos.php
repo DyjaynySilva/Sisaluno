@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles1.css">
   <title>lista aluno</title>
 </head>
 <body>
@@ -60,20 +59,132 @@
   $retorno->execute();
 
 ?>       
-        <h1> Atenção! Só é permitido alterar o nome, o CPF e a cidade.</h1>  
+
+ <style>
+  body{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0%;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(122, 139, 231, 0.747);
+}
+
+
+table {
+    font-family: 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    padding-left: 25px;
+    padding-top: 5px;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    
+
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  h1{
+    padding-left: 110px;
+    padding-top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.topo{
+    background-color: rgb(95, 95, 211);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+  
+
+    position: sticky;
+    top:0;
+    
+}
+.conteudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.conteudo2{
+  height: 100px;
+  width: 200px;
+  display: flex;
+    justify-content: space-between;
+}
+.rodape{
+    width: 100%;
+    height: 100px; 
+    background-color:rgb(95, 95, 211) ;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    color: wheat;
+    margin-top: 10px;
+}
+button{
+    background-color: rgb(19, 155, 179);
+    width: 70px;
+    height: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border:transparent;
+    padding: 10px;
+    margin: 20px;
+
+    top:100px;
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+
+}
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+.conteudo, h1{
+    color: black;
+
+}
+form{
+    width: 150px;
+}
+#nome{
+    width: 500px;
+    height: 20px;
+}
+
+ </style>
+<div class="conteudo">
         <table> 
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>NOME</th>
-                    <th>CPF</th>
-                    <th>CIDADE</th>
-                    <th>EMAIL</th>
-                    <th>SENHA</th>
-                    <th>ESTADO</th>
-                    <th>CEP</th>
-                    <th>OCUPAÇÃO</th>
-                    <th>INSTITUIÇÃO</th>
+                    <th>ENDEREÇO</th>
+                    <th>IDADE</th>
+                    <th>STATUS</th>
+                    <th>DATA DE NASCIMENTO</th>
+                    
+                   
 
                 </tr>
             </thead>
@@ -83,30 +194,25 @@
                     <?php foreach($retorno->fetchall() as $value) { ?>
                         <tr>
                             <td> <?php echo $value['id']?>  </td> 
-                            <td> <?php echo $value['nome']?>  </td> 
-                            <td> <?php echo $value['cpf']?>  </td> 
-                            <td> <?php echo $value['cidade']?> </td> 
-                            <td> <?php echo $value['email']?>  </td> 
-                            <td> <?php echo $value['senha']?>  </td> 
-                            <td> <?php echo $value['estado']?>  </td> 
-                            <td> <?php echo $value['cep']?>  </td> 
-                            <td> <?php echo $value['ocupacao']?>  </td> 
-                            <td> <?php echo $value['instituicao']?>  </td> 
+                            <td> <?php echo $value['nome']?>  </td>  
+                            <td> <?php echo $value['endereco']?> </td> 
+                            <td> <?php echo $value['idade']?> </td> 
+                            <td> <?php echo $value['estatus']?> </td> 
+                            <td> <?php echo $value['datanascimento']?>  </td> 
+                             
+                            
 
                             <td>
                                <form method="POST" action="altaluno.php">
 
                                          <input name="id" type="hidden" value=" <?php echo $value['id'];?>"/>
                                         <input name="nome" type="hidden" value=" <?php echo $value['nome'];?>"/>
-                                        <input name="cpf" type="hidden" value=" <?php echo $value['cpf'];?>"/>
-                                        <input name="cidade" type="hidden" value=" <?php echo $value['cidade'];?>"/>
-                                        <input name="email" type="hidden" value=" <?php echo $value['email'];?>"/>
-                                        <input name="senha" type="hidden" value=" <?php echo $value['senha'];?>"/>
-                                        <input name="estado" type="hidden" value=" <?php echo $value['estado'];?>"/>
-                                        <input name="cep" type="hidden" value=" <?php echo $value['cep'];?>"/>
-                                        <input name="ocupacao" type="hidden" value=" <?php echo $value['ocupacao'];?>"/>
-                                        <input name="instituicao" type="hidden" value=" <?php echo $value['instituicao'];?>"/>
-
+                                        <input name="cidade" type="hidden" value=" <?php echo $value['endereco'];?>"/>
+                                        <input name="idade" type="hidden" value=" <?php echo $value['idade'];?>"/>
+                                        <input name="estatus" type="hidden" value=" <?php echo $value['estatus'];?>"/>
+                                        <input name="datanascimento" type="hidden" value=" <?php echo $value['datanascimento'];?>"/>
+                                      
+                                       
                                         <button name="alterar"  type="submit" style="background-color: rgb(46, 179, 19);width: 70px;height: 30px;font-family: 'Times New Roman', Times, serif;border-radius: 10px;border:transparent;padding: 10px;margin: 20px;" >Alterar</button>
                                 </form>
 
@@ -117,14 +223,12 @@
 
                                         <input name="id" type="hidden" value="<?php echo $value['id'];?>"/>
                                         <input name="nome" type="hidden" value="<?php echo $value['nome'];?>"/>
-                                        <input name="cpf" type="hidden" value=" <?php echo $value['cpf'];?>"/>
-                                        <input name="cidade" type="hidden" value=" <?php echo $value['cidade'];?>"/>
-                                        <input name="email" type="hidden" value=" <?php echo $value['email'];?>"/>
-                                        <input name="senha" type="hidden" value=" <?php echo $value['senha'];?>"/>
-                                        <input name="estado" type="hidden" value=" <?php echo $value['estado'];?>"/>
-                                        <input name="cep" type="hidden" value=" <?php echo $value['cep'];?>"/>
-                                        <input name="ocupacao" type="hidden" value=" <?php echo $value['ocupacao'];?>"/>
-                                        <input name="instituicao" type="hidden" value=" <?php echo $value['instituicao'];?>"/>
+                                        <input name="endereco" type="hidden" value=" <?php echo $value['endereco'];?>"/>
+                                        <input name="idade" type="hidden" value=" <?php echo $value['idade'];?>"/>
+                                        <input name="estatus" type="hidden" value=" <?php echo $value['estatus'];?>"/>
+                                        <input name="datanascimento" type="hidden" value=" <?php echo $value['datanascimento'];?>"/>
+                                        
+                                        
 
                                         <button name="excluir"  type="submit" style=" background-color: rgb(235, 10, 29);width: 70px;height: 30px; font-family: 'Times New Roman', Times, serif;border-radius: 10px;border:transparent;padding: 10px;margin: 20px;">Excluir</button>
                                 </form>
@@ -138,16 +242,25 @@
                  </tr>
             </tbody>
         </table>
+
+
+        <div class="conteudo2">
 <?php  
    echo "<br>";       
-   echo "<button class=button  style= background-color: rgb(19, 155, 179);width: 70px;height: 30px; font-family: 'Times New Roman', Times, serif;border-radius: 10px;border:transparent;padding: 10px;margin: 20px; button3'><a href='index.php'>voltar</a></button>";
+   echo "<button class=button  style= background-color: rgb(19, 155, 179);width: 100px;height: 50px; font-family: 'Times New Roman', Times, serif;border-radius: 10px;border:transparent;padding: 10px;margin: 20px; button3'><a href='index.php'>voltar</a></button>";
    echo "<br>";   
 ?>
+</div>
+        </div>
+
+        
+
 
 <div class="rodape">
 
 @Dyjayny Silva
 </div>
+
 
 </body>
 </html>
