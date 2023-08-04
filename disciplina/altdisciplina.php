@@ -112,7 +112,7 @@ body{
 
 ?>
 
-  <form method="POST" action="crudprofessor.php">
+  <form method="POST" action="cruddisciplina.php">
          Nome da Disciplina:
         <input type="text" name="nomedisciplina" id="" value=<?php echo $nomedisciplina?> >
         Carga Horária:
