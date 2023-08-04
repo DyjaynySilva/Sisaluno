@@ -57,19 +57,15 @@ require_once('conexao.php');
 ##cadastrar
 if(isset($_GET['cadastrar'])){
         ##dados recebidos pelo metodo GET
-        $nome = $_GET["nome"];
-        $cpf = $_GET["cpf"];
-        $email= $_GET["email"];
-        $senha= $_GET["senha"];
-        $cidade= $_GET["cidade"];
-        $estado= $_GET["estado"];
-        $cep= $_GET["cep"];
-        $ocupacao= $_GET["ocupacao"];
-        $instituicao= $_GET["instituicao"];
+        $nome= $_GET['nome'];
+        $estatus= $_GET['estatus'];
+        $idade= $_GET['idade'];
+        $endereco= $_GET['endereco'];
+        $datanascimento= $_GET['datanascimento'];
 
         ##codigo SQL
-        $sql = "INSERT INTO aluno(nome,cpf,email, senha, cidade, estado, cep, ocupacao, instituicao) 
-                VALUES('$nome','$cpf','$email','$senha','$cidade','$estado',' $cep','$ocupacao','$instituicao')";
+        $sql = " INSERT INTO Aluno(nome, estatus, idade, endereco, datanascimento)
+        VALUES ('$nome','$estatus','$idade','$endereco','$datanascimento')";
 
         ##junta o codigo sql a conexao do banco
         $sqlcombanco = $conexao->prepare($sql);
@@ -87,14 +83,16 @@ if(isset($_POST['update'])){
 
     ##dados recebidos pelo metodo POST
     $nome = $_POST["nome"];
-    $cpf = $_POST["cpf"];
-    $cidade = $_POST["cidade"];
+    $endereco = $_POST["endereco"];
+    $idade = $_POST["idade"];
+    $estatus = $_POST["estatus"];
+    $datanascimento = $_POST["datanascimento"];
     $id = $_POST["id"];
     
 
    
       ##codigo sql
-    $sql = "UPDATE  aluno SET nome= :nome, cpf= :cpf, cidade= :cidade WHERE id= :id ";
+    $sql = "UPDATE  aluno SET nome= :nome, endereco= :endereco, idade= :idade, estatus= :estatus, datanascimento= :datanascimento WHERE id= :id ";
    
     ##junta o codigo sql a conexao do banco
     $stmt = $conexao->prepare($sql);
@@ -102,8 +100,10 @@ if(isset($_POST['update'])){
     ##diz o paramentro e o tipo  do paramentros
     $stmt->bindParam(':id',$id, PDO::PARAM_INT);
     $stmt->bindParam(':nome',$nome, PDO::PARAM_STR);
-    $stmt->bindParam(':cidade',$cidade, PDO::PARAM_STR);
-    $stmt->bindParam(':cpf',$cpf, PDO::PARAM_INT);
+    $stmt->bindParam(':endereco',$endereco, PDO::PARAM_STR);
+    $stmt->bindParam(':idade',$idade, PDO::PARAM_INT);
+    $stmt->bindParam(':estatus',$estatus, PDO::PARAM_STR);
+    $stmt->bindValue (":datanascimento",$datanascimento, PDO::PARAM_STR);
     $stmt->execute();
  
 
