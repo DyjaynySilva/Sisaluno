@@ -1,0 +1,65 @@
+.topo{
+    background-color: rgb(95, 95, 211);
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+
+    position: sticky;
+    top:0;
+    
+}
+.rodape{
+    width: 100%;
+    height: 100px; 
+    background-color:rgb(95, 95, 211) ;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    color: wheat;
+    margin-top: 10px;
+}
+
+button{
+    background-color: rgb(36, 146, 45);
+    width: 70px;
+    height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    border:transparent;
+    padding: 10px;
+    margin: 20px;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgba(122, 139, 231, 0.747);
+}
+.conteudo{
+    width: 99.5%;
+    height: 100vh;
+    display: flex;
+    background-color: rgba(122, 139, 231, 0.747);
+    flex-direction: column;
+    padding-top: 30px;
+    padding-left: 40px;
+    font-family: 'Times New Roman', Times, serif;
+
+
+    
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+
+}
+a:visited{
+    color: white;
+    text-decoration: none;
+}
