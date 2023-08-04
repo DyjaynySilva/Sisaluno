@@ -251,7 +251,7 @@ form{
         <div class="conteudo2">
 <?php  
    echo "<br>";       
-   echo "<button class=button  style= background-color: rgb(19, 155, 179);width: 100px;height: 50px; font-family: 'Times New Roman', Times, serif;border-radius: 10px;border:transparent;padding: 10px;margin: 20px; button3'><a href='indexp.php'>voltar</a></button>";
+   echo "<button class=button  style= background-color: rgb(19, 155, 179);width: 100px;height: 50px; font-family: 'Times New Roman', Times, serif;border-radius: 10px;border:transparent;padding: 10px;margin: 20px; button3'><a href='index.php'>voltar</a></button>";
    echo "<br>";   
 ?>
 </div>
